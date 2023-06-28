@@ -1,8 +1,62 @@
-import React from "react";
+import { Fragment, useState } from "react";
+import NavLinks from "./NavLinks";
+import { NavLink } from "react-router-dom";
+import { HiOutlineBars3, HiOutlineXMark } from "react-icons/hi2";
 import "../styles/navbar.css";
 
+/* If screen sizes regular top nav, if screen size is smaller then navbar toggles from the side */
 function Navbar() {
-  return <div>Navbar</div>;
+  const [toggleNav, setToggleNav] = useState(false);
+
+  return (
+    <Fragment>
+      <nav className="primary-nav">
+        <i
+          onClick={() => setToggleNav(!toggleNav)}
+          className={!toggleNav ? "bars" : "close"}
+        >
+          {!toggleNav ? (
+            <HiOutlineBars3 className="nav-icon" />
+          ) : (
+            <HiOutlineXMark className="nav-icon" />
+          )}
+        </i>
+        <div className="logo-wrapper">
+          <h3 className="logo">Blog Home & Garden</h3>
+          <p className="logo-desc">A century of love for home and garden</p>
+        </div>
+        <ul className="nav-list">
+          <li className="nav-li">
+            <p>Username</p>
+          </li>
+          <li className="nav-li">
+            <div className="nav-li-wrapper">
+              <NavLink>Login</NavLink>
+            </div>
+          </li>
+          <li className="nav-li">
+            <div className="nav-li-wrapper">
+              <NavLink>Write</NavLink>
+            </div>
+          </li>
+          <li className="nav-li">
+            <div className="nav-li-wrapper">
+              <p>Newsletter</p>
+            </div>
+          </li>
+        </ul>
+        <div
+          className={
+            !toggleNav ? "links-content-wrapper" : "links-content-wrapper show"
+          }
+        >
+          <NavLinks className="links-content" />
+        </div>
+
+        {toggleNav && <div className="backdrop"></div>}
+      </nav>
+    </Fragment>
+  );
 }
 
 export default Navbar;
