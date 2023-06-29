@@ -1,5 +1,5 @@
 import "./App.css";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -12,11 +12,12 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 function App() {
   const Layout = () => {
+    const [showModal, setShowModal] = useState(false);
     return (
       <Fragment>
         <Navbar />
         <Outlet />
-        <Footer />
+        <Footer toggle={() => setShowModal(!showModal)} />
       </Fragment>
     );
   };
