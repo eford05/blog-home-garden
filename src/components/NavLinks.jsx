@@ -16,13 +16,13 @@ function NavLinks() {
       <ul className="primary-list">
         <li className="primary-li">
           <div className="li-wrapper">
-            <NavLink to="/?cat=home-improve">Home Improvement</NavLink>
+            <NavLink to="/?cat=decor">Decorating</NavLink>
             <HiChevronRight className="chevron" />
           </div>
         </li>
         <li className="primary-li">
           <div className="li-wrapper">
-            <NavLink to="/?cat=decor">Decorating</NavLink>
+            <NavLink to="/?cat=home-improve">Home Improvement</NavLink>
             <HiChevronRight className="chevron" />
           </div>
         </li>
@@ -35,6 +35,12 @@ function NavLinks() {
         <li className="primary-li">
           <div className="li-wrapper">
             <NavLink to="/?cat=housekeeping">Housekeeping</NavLink>
+            <HiChevronRight className="chevron" />
+          </div>
+        </li>
+        <li className="primary-li">
+          <div className="li-wrapper">
+            <NavLink to="/?cat=recipes">Recipes</NavLink>
             <HiChevronRight className="chevron" />
           </div>
         </li>
