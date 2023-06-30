@@ -9,6 +9,7 @@ import Write from "./pages/Write";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import NewsModal from "./components/NewsModal";
 
 function App() {
   const Layout = () => {
@@ -16,6 +17,7 @@ function App() {
     return (
       <Fragment>
         <Navbar />
+        {showModal && <NewsModal toggle={() => setShowModal(!showModal)} />}
         <Outlet />
         <Footer toggle={() => setShowModal(!showModal)} />
       </Fragment>
