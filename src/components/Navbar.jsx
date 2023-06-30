@@ -3,10 +3,14 @@ import NavLinks from "./NavLinks";
 import { NavLink } from "react-router-dom";
 import { HiOutlineBars3, HiOutlineXMark } from "react-icons/hi2";
 import "../styles/navbar.css";
+import { useContext } from "react";
+import { CatContext } from "../contexts/CatContext";
 
 /* If screen sizes regular top nav, if screen size is smaller then navbar toggles from the side */
 function Navbar() {
   const [toggleNav, setToggleNav] = useState(false);
+
+  const { setCat } = useContext(CatContext);
 
   return (
     <Fragment>
@@ -21,9 +25,11 @@ function Navbar() {
             <HiOutlineXMark className="nav-icon" />
           )}
         </i>
-        <div className="logo-wrapper">
-          <h3 className="logo">Blog Home & Garden</h3>
-          <p className="logo-desc">A century of love for home and garden</p>
+        <div className="logo-wrapper" onClick={() => setCat(0)}>
+          <NavLink to="/">
+            <h3 className="logo">Blog Home & Garden</h3>
+            <p className="logo-desc">A century of love for home and garden</p>
+          </NavLink>
         </div>
         <ul className="nav-list">
           <li className="nav-li">

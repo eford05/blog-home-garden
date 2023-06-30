@@ -8,23 +8,34 @@ import Post from "./pages/Post";
 import Write from "./pages/Write";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import NewsModal from "./components/NewsModal";
+import { CatContext } from "./contexts/CatContext";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
+/*
+  Toggle show modal in modal component
+  Set categories through context provider to navbar and home
+*/
 
 function App() {
   const Layout = () => {
     const [showModal, setShowModal] = useState(false);
 
+    const [cat, setCat] = useState(0);
+
+    //If showModal is true prevent scrolling
     showModal
       ? (document.body.style = "hidden")
       : (document.body.style = "auto");
 
     return (
       <Fragment>
-        <Navbar />
-        {showModal && <NewsModal toggle={() => setShowModal(!showModal)} />}
-        <Outlet />
-        <Footer toggle={() => setShowModal(!showModal)} />
+        <CatContext.Provider value={{ cat, setCat }}>
+          <Navbar />
+          {showModal && <NewsModal toggle={() => setShowModal(!showModal)} />}
+          <Outlet />
+          <Footer toggle={() => setShowModal(!showModal)} />
+        </CatContext.Provider>
       </Fragment>
     );
   };

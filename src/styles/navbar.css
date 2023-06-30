@@ -29,6 +29,10 @@
   justify-content: center;
 }
 
+.logo-wrapper:hover {
+  cursor: pointer;
+}
+
 .logo {
   font-size: clamp(1.6rem, 1vh + 8rem, 1.8rem);
   white-space: nowrap;

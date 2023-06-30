@@ -9,37 +9,49 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import "../styles/navlinks.css";
+import { useContext } from "react";
+import { CatContext } from "../contexts/CatContext";
 
+/*
+  Set categories on click
+  1 = decor
+  2 = repair
+  3 = garden
+  4 = housekeeping
+  5 = recipes
+*/
 function NavLinks() {
+  const { setCat } = useContext(CatContext);
+
   return (
     <div className="links-container">
       <ul className="primary-list">
         <li className="primary-li">
-          <div className="li-wrapper">
+          <div className="li-wrapper" onClick={() => setCat(1)}>
             <NavLink to="/?cat=decor">Decorating</NavLink>
             <HiChevronRight className="chevron" />
           </div>
         </li>
         <li className="primary-li">
-          <div className="li-wrapper">
+          <div className="li-wrapper" onClick={() => setCat(2)}>
             <NavLink to="/?cat=home-improve">Home Improvement</NavLink>
             <HiChevronRight className="chevron" />
           </div>
         </li>
         <li className="primary-li">
-          <div className="li-wrapper">
+          <div className="li-wrapper" onClick={() => setCat(3)}>
             <NavLink to="/?cat=garden">Garden</NavLink>
             <HiChevronRight className="chevron" />
           </div>
         </li>
         <li className="primary-li">
-          <div className="li-wrapper">
+          <div className="li-wrapper" onClick={() => setCat(4)}>
             <NavLink to="/?cat=housekeeping">Housekeeping</NavLink>
             <HiChevronRight className="chevron" />
           </div>
         </li>
         <li className="primary-li">
-          <div className="li-wrapper">
+          <div className="li-wrapper" onClick={() => setCat(5)}>
             <NavLink to="/?cat=recipes">Recipes</NavLink>
             <HiChevronRight className="chevron" />
           </div>
