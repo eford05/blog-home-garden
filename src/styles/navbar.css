@@ -62,7 +62,7 @@
   grid-column: auto / span 2;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
   .backdrop {
     z-index: -1;
     position: absolute;
@@ -102,7 +102,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   .links-content-wrapper {
     z-index: 2;
     position: absolute;
