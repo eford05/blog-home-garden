@@ -18,7 +18,7 @@ function Footer({ toggle }) {
   return (
     <footer>
       <section className="footer-primary">
-        <h3 className="footer-logo">Blog Home & Garden</h3>
+        <h3 className="logo">Blog Home & Garden</h3>
         <button className="news-btn" onClick={toggle}>
           Newsletter
         </button>
@@ -49,16 +49,16 @@ function Footer({ toggle }) {
             <Link>Decortating</Link>
           </li>
           <li>
-            <Link>Garden</Link>
+            <Link>Home Improvement</Link>
           </li>
           <li>
-            <Link>Recipes</Link>
+            <Link>Garden</Link>
           </li>
           <li>
             <Link>Housekeeping</Link>
           </li>
           <li>
-            <Link>Home Improvement</Link>
+            <Link>Recipes</Link>
           </li>
           <li>
             <Link>About</Link>
