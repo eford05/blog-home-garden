@@ -60,3 +60,34 @@ footer {
 .footer-list li a:hover {
   text-decoration: underline 0.05rem solid #000;
 }
+
+@media screen and (max-width: 950px) {
+  footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .footer-primary {
+    width: 50%;
+  }
+
+  .footer-primary .logo {
+    align-self: center;
+  }
+
+  .footer-secondary {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer-primary {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-primary {
+    width: 80%;
+  }
+}

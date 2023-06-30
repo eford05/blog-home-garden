@@ -14,6 +14,11 @@ import NewsModal from "./components/NewsModal";
 function App() {
   const Layout = () => {
     const [showModal, setShowModal] = useState(false);
+
+    showModal
+      ? (document.body.style = "hidden")
+      : (document.body.style = "auto");
+
     return (
       <Fragment>
         <Navbar />

@@ -14,6 +14,7 @@ import "../styles/footer.css";
 
   This will toggle a newsletter modal component
 */
+
 function Footer({ toggle }) {
   return (
     <footer>
