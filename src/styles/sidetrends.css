@@ -1,0 +1,58 @@
+.side-trends {
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  background-color: #ecf2ff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+
+.side-trends-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.trend-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.trend-card-fig {
+  grid-row: 1 / span 2;
+  width: 100%;
+  height: 6.5rem;
+}
+
+.trend-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.trend-card-title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  padding-left: 1rem;
+}
+
+.trend-card-title:hover {
+  text-decoration: underline solid 1px #000;
+}
+
+.trend-card-author {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  color: #555;
+}

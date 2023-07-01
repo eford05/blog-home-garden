@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import HomePage from "../components/categories/HomePage";
 import Posts from "../components/categories/Posts";
 import { CatContext } from "../contexts/CatContext";
@@ -17,7 +17,7 @@ import "../styles/home.css";
 */
 function Home() {
   const { cat } = useContext(CatContext);
-  return <div>{cat === 0 ? <HomePage /> : <Posts />}</div>;
+  return <Fragment>{cat === 0 ? <HomePage /> : <Posts />}</Fragment>;
 }
 
 export default Home;
