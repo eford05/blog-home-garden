@@ -1,4 +1,6 @@
 import { useContext } from "react";
+import HomePage from "../components/categories/HomePage";
+import Posts from "../components/categories/Posts";
 import { CatContext } from "../contexts/CatContext";
 import "../styles/home.css";
 
@@ -10,10 +12,12 @@ import "../styles/home.css";
   3 = garden
   4 = housekeeping
   5 = recipes
+
+  If cat is equal to zero show homepage content otherwise show post content based on their category
 */
 function Home() {
   const { cat } = useContext(CatContext);
-  return <div>{cat}</div>;
+  return <div>{cat === 0 ? <HomePage /> : <Posts />}</div>;
 }
 
 export default Home;
