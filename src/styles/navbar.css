@@ -38,6 +38,10 @@
   white-space: nowrap;
 }
 
+.logo-desc {
+  color: #000;
+}
+
 .nav-list {
   justify-self: flex-end;
   display: flex;
