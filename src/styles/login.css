@@ -94,4 +94,32 @@
   .login-reg-fig {
     grid-row: 2 / span 2;
   }
+
+  .header-logo .logo {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .header-logo .logo-desc {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .login-reg-form,
+  .login-reg-wrapper {
+    gap: 0.25rem;
+  }
+
+  .login-reg-input,
+  .login-reg-submit {
+    font-size: 1.2rem;
+  }
+
+  .login-reg-p,
+  .login-reg-link {
+    font-size: 1rem;
+  }
+
+  .login-reg-title {
+    font-size: 1.6rem;
+  }
 }

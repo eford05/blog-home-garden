@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import "../styles/login.css";
 
 function Register() {
-  //no scroll
-  document.body.style.overflow = "hidden";
   return (
     <main className="login-reg">
       <figure className="login-reg-fig">
@@ -20,7 +18,7 @@ function Register() {
         </Link>
       </header>
       <form action="" className="login-reg-form" id="login">
-        <h1 className="login-reg-title">Log in</h1>
+        <h1 className="login-reg-title">Register</h1>
         <div className="login-reg-wrapper">
           <label htmlFor="username">Username</label>
           <input
