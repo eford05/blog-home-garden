@@ -37,12 +37,12 @@ function Navbar() {
           </li>
           <li className="nav-li">
             <div className="nav-li-wrapper">
-              <NavLink>Login</NavLink>
+              <NavLink to="/login">Login</NavLink>
             </div>
           </li>
           <li className="nav-li">
             <div className="nav-li-wrapper">
-              <NavLink>Write</NavLink>
+              <NavLink to="/write">Write</NavLink>
             </div>
           </li>
           <li className="nav-li">
