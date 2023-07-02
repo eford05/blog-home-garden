@@ -85,7 +85,7 @@
   font-size: 1.1rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
   .write {
     display: flex;
     flex-direction: column;
