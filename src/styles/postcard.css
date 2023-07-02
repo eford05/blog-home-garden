@@ -1,0 +1,57 @@
+.post-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 2rem 0;
+  border-bottom: 1px solid #555;
+}
+
+.post-card:last-of-type {
+  border: none;
+}
+
+.post-card-fig {
+  width: 100%;
+  height: 12rem;
+}
+
+.post-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  gap: 1rem;
+}
+
+.post-card-cat {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.post-card-title {
+  font-size: 2.4rem;
+  color: #000;
+}
+
+.post-card-title:hover {
+  text-decoration: underline solid 0.1rem;
+}
+
+/* Repsonsive Designs */
+@media screen and (max-width: 750px) {
+  .post-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-card-info {
+    padding: 0;
+  }
+}

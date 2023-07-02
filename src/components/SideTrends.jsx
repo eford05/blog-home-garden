@@ -10,7 +10,7 @@ function SideTrends() {
       {posts
         .filter((post) => post.trending === true)
         .map((post) => (
-          <div className="trend-card">
+          <div className="trend-card" key={post.id}>
             <figure className="trend-card-fig">
               <img src={post.src} alt={post.alt} />
             </figure>

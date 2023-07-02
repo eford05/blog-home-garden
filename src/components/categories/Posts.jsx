@@ -5,7 +5,12 @@ import "../../styles/categories/posts.css";
 
 function Posts() {
   const { cat } = useContext(CatContext);
-  return <div>Posts</div>;
+  return (
+    <div className="posts-container">
+      <h2 className="posts-title"></h2>
+      <section className="posts-section"></section>
+    </div>
+  );
 }
 
 export default Posts;

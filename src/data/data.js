@@ -126,21 +126,6 @@ export const posts = [
     featured: false,
     path: "/post/8",
   },
-  {
-    id: 7,
-    src: "",
-    alt: "",
-    title: "Lorem Ipsum Dolor",
-    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, nobis.",
-    auth: "Author",
-    post: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde porro mollitia, doloribus laborum quos ullam cupiditate quod iusto tenetur eligendi natus deserunt! Cupiditate amet accusantium commodi atque pariatur nobis maxime laudantium mollitia, repellat rerum esse in omnis voluptatum! Velit exercitationem voluptatibus aperiam cupiditate distinctio minima tempore, laudantium consectetur adipisci laboriosam?",
-    cat: "",
-    main: true,
-    trending: false,
-    recommended: false,
-    featured: false,
-    path: "/post/7",
-  },
 ];
 
 //Hero banners for each of the categories

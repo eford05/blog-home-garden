@@ -12,6 +12,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .home-feature-fig {
@@ -30,7 +31,8 @@
   color: #555;
 }
 
-.home-feature-title {
+.home-feature-title,
+.posts-title {
   font-size: 3rem;
   color: #000;
 }
@@ -46,4 +48,77 @@
 .home-feature-auth {
   font-size: 1.1rem;
   color: #555;
+}
+
+/* Posts Section */
+.posts-container {
+  width: 80%;
+}
+
+.posts-container,
+.posts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.posts-section {
+  width: 100%;
+}
+
+.posts-title {
+  text-align: center;
+}
+
+/*banner section*/
+.banner {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url("https://images.unsplash.com/photo-1602615576820-ea14cf3e476a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  background-position: bottom;
+  margin-top: 5rem;
+  padding: 10vh 10%;
+}
+
+.banner-card {
+  width: clamp(25rem, 40vw + 1rem, 30rem);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.banner-cat {
+  font-size: 1.6rem;
+  color: #555;
+}
+
+.banner-title {
+  font-size: 2.2rem;
+  color: #000;
+}
+
+.banner-desc {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.banner-auth {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.banner-title:hover {
+  text-decoration: underline solid 0.1rem;
+}
+
+/* Responsive Designs */
+@media screen and (max-width: 1000px) {
+  .home-feature-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
