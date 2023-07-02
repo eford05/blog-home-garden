@@ -68,10 +68,10 @@ function NavLinks() {
           <p>Username</p>
         </li>
         <li className="secondary-li">
-          <NavLink>Login</NavLink>
+          <NavLink to="/login">Login</NavLink>
         </li>
         <li className="secondary-li">
-          <NavLink>Write</NavLink>
+          <NavLink to="/write">Write</NavLink>
         </li>
         <li className="secondary-li">
           <p>Newsletter</p>
