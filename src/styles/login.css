@@ -1,0 +1,97 @@
+.login-reg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.login-reg-fig {
+  width: 100%;
+  grid-row: 1 / span 2;
+}
+
+.login-reg-fig img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.header-logo {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+.login-reg-form,
+.login-reg-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-reg-form {
+  width: 65%;
+  display: flex;
+  justify-self: center;
+  gap: 1rem;
+}
+
+.login-reg-wrapper {
+  width: 90%;
+  gap: 0.5rem;
+  align-self: center;
+}
+
+.login-reg-submit,
+.login-reg-input {
+  font-size: 1.4rem;
+}
+
+.login-reg-input {
+  width: 80%;
+  padding: 0.5rem;
+}
+
+.login-reg-submit {
+  width: 80%;
+  background-color: #73bbc9;
+  color: #fff;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  font-weight: 500;
+  border: none;
+}
+
+.login-reg-submit:hover {
+  cursor: pointer;
+}
+
+.login-reg-prompt {
+  display: flex;
+}
+
+.login-reg-p,
+.login-reg-link {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #000;
+}
+
+.login-reg-link {
+  text-decoration: underline;
+  margin-left: 0.35rem;
+}
+
+@media screen and (max-width: 900px) {
+  .login-reg {
+    grid-template-columns: 1fr;
+  }
+
+  .login-reg-fig img {
+    height: 30vh;
+  }
+
+  .login-reg-fig {
+    grid-row: 2 / span 2;
+  }
+}
