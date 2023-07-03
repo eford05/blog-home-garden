@@ -38,6 +38,7 @@ function HomePage() {
             )
             .map((post) => (
               <PostCard
+                classStyle="home"
                 src={post.src}
                 alt={post.alt}
                 cat={post.cat}

@@ -1,4 +1,5 @@
-.post-card {
+/* Home Styles and Category Styles */
+.home-post-card {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -6,22 +7,30 @@
   border-bottom: 1px solid #555;
 }
 
-.post-card:last-of-type {
+.cat-post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid lightgrey;
+  padding-bottom: 1rem;
+}
+
+.home-post-card:last-of-type {
   border: none;
 }
 
-.post-card-fig {
+.post-fig {
   width: 100%;
   height: 12rem;
 }
 
-.post-card img {
+.post-fig img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.post-card-info {
+.post-info {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -29,35 +38,55 @@
   gap: 1rem;
 }
 
-.post-card-cat {
+.post-cat {
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #555;
 }
 
-.post-card-title {
+.post-title {
   font-size: 2.4rem;
   color: #000;
 }
 
-.post-card-title:hover {
+.post-title:hover {
   text-decoration: underline solid 0.1rem;
 }
 
-/* Repsonsive Designs */
+.cat-post-card .post-auth {
+  display: none;
+}
+
+/* Repsonsive Designs Home */
 @media screen and (max-width: 900px) {
-  .post-card {
+  .home-post-card {
     grid-template-columns: 1fr 2fr;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .post-card {
+  .home-post-card {
     display: flex;
     flex-direction: column;
   }
 
-  .post-card-info {
+  .home-post-info {
     padding: 0;
+  }
+
+  .cat-post-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    gap: 0.25rem;
+  }
+
+  .cat-post-card .post-cat {
+    font-size: 1rem;
+  }
+
+  .cat-post-card .post-title {
+    font-size: 2rem;
   }
 }

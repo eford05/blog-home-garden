@@ -1,0 +1,35 @@
+.hero-fig,
+.hero-fig img {
+  width: 100vw;
+  height: 50vh;
+}
+
+.hero-fig img {
+  object-fit: cover;
+}
+
+.posts-section-cat {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* Responsive Designs */
+@media screen and (max-width: 980px) {
+  .posts-section-cat {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .posts-section-cat {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .posts-section-cat {
+    display: flex;
+    flex-direction: column;
+  }
+}
