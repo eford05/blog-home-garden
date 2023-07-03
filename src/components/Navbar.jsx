@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { CatContext } from "../contexts/CatContext";
 
 /* If screen sizes regular top nav, if screen size is smaller then navbar toggles from the side */
-function Navbar() {
+function Navbar({ toggle }) {
   const [toggleNav, setToggleNav] = useState(false);
 
   const { setCat } = useContext(CatContext);
@@ -46,7 +46,7 @@ function Navbar() {
             </div>
           </li>
           <li className="nav-li">
-            <div className="nav-li-wrapper">
+            <div className="nav-li-wrapper" onClick={toggle}>
               <p>Newsletter</p>
             </div>
           </li>
