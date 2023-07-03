@@ -7,6 +7,8 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { CatContext } from "../contexts/CatContext";
 import "../styles/footer.css";
 
 /*
@@ -16,10 +18,14 @@ import "../styles/footer.css";
 */
 
 function Footer({ toggle }) {
+  const { setCat } = useContext(CatContext);
+
   return (
     <footer>
       <section className="footer-primary">
-        <h3 className="logo">Blog Home & Garden</h3>
+        <h3 className="logo" onClick={() => setCat(0)}>
+          Blog Home & Garden
+        </h3>
         <button className="news-btn" onClick={toggle}>
           Newsletter
         </button>
@@ -47,19 +53,29 @@ function Footer({ toggle }) {
       <section className="footer-secondary">
         <ul className="footer-list">
           <li>
-            <Link>Decortating</Link>
+            <Link to="/?cat=decor" onClick={() => setCat(1)}>
+              Decortating
+            </Link>
           </li>
           <li>
-            <Link>Home Improvement</Link>
+            <Link to="/?cat=repair" onClick={() => setCat(2)}>
+              Home Improvement
+            </Link>
           </li>
           <li>
-            <Link>Garden</Link>
+            <Link to="/?cat=garden" onClick={() => setCat(3)}>
+              Garden
+            </Link>
           </li>
           <li>
-            <Link>Housekeeping</Link>
+            <Link to="/?cat=housekeeping" onClick={() => setCat(4)}>
+              Housekeeping
+            </Link>
           </li>
           <li>
-            <Link>Recipes</Link>
+            <Link to="/?cat=recipes" onClick={() => setCat(5)}>
+              Recipes
+            </Link>
           </li>
           <li>
             <Link>About</Link>
