@@ -65,6 +65,7 @@ export const posts = [
     trending: true,
     recommended: false,
     featured: false,
+    path: "/post/4",
   },
   {
     id: 5,
