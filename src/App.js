@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NewsModal from "./components/NewsModal";
 import { CatContext } from "./contexts/CatContext";
+import { PostContext } from "./contexts/PostContext";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 /*
@@ -22,6 +23,7 @@ function App() {
     const [showModal, setShowModal] = useState(false);
 
     const [cat, setCat] = useState(0);
+    const [currentPost, setCurrentPost] = useState(1);
 
     //If showModal is true prevent scrolling
     showModal
@@ -31,10 +33,12 @@ function App() {
     return (
       <Fragment>
         <CatContext.Provider value={{ cat, setCat }}>
-          <Navbar />
-          {showModal && <NewsModal toggle={() => setShowModal(!showModal)} />}
-          <Outlet />
-          <Footer toggle={() => setShowModal(!showModal)} />
+          <PostContext.Provider value={{ currentPost, setCurrentPost }}>
+            <Navbar />
+            {showModal && <NewsModal toggle={() => setShowModal(!showModal)} />}
+            <Outlet />
+            <Footer toggle={() => setShowModal(!showModal)} />
+          </PostContext.Provider>
         </CatContext.Provider>
       </Fragment>
     );

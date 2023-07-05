@@ -4,6 +4,7 @@ import { CatContext } from "./../../contexts/CatContext";
 import { posts, heroes } from "../../data/data.js";
 import "../../styles/categories/posts.css";
 
+// Pass down post id so that post card can update post page with correct post information to be used inside post page
 function Posts() {
   const { cat } = useContext(CatContext);
 
@@ -38,6 +39,7 @@ function Posts() {
               path={post.path}
               title={post.title}
               auth={post.auth}
+              id={post.id}
               key={post.id}
             />
           ))}

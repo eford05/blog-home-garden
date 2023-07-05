@@ -1,13 +1,17 @@
-import React from "react";
+import { useContext } from "react";
 import SideTrends from "../SideTrends";
 import { posts } from "../../data/data";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
 import PostCard from "../PostCard";
+import { PostContext } from "../../contexts/PostContext";
 
 //For the post section filter where post is main, not featured, not trending, and not recommended
 
+//Update current post with id when link clicked
+
 function HomePage() {
+  const { setCurrentPost } = useContext(PostContext);
   return (
     <main className="home">
       <div className="home-feature-wrapper">
@@ -16,7 +20,7 @@ function HomePage() {
             <img src={posts[0].src} alt={posts[0].alt} />
           </figure>
           <p className="home-feature-trend">Home Trends</p>
-          <Link to={posts[0].path}>
+          <Link to={posts[0].path} onClick={() => setCurrentPost(posts[0].id)}>
             <h1 className="home-feature-title">{posts[0].title}</h1>
           </Link>
           <p className="home-feature-desc">{posts[0].desc}</p>
@@ -45,6 +49,7 @@ function HomePage() {
                 path={post.path}
                 title={post.title}
                 auth={post.auth}
+                id={post.id}
                 key={post.id}
               />
             ))}
