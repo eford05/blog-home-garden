@@ -22,7 +22,7 @@ function Posts() {
         .filter((hero) => cat === hero.id)
         .map((hero) => (
           <Fragment>
-            <figure className="hero-fig">
+            <figure className="hero-fig" key={hero.id}>
               <img src={hero.banner} alt={hero.alt} />
             </figure>
             <h2 className="posts-title">{hero.title}</h2>
