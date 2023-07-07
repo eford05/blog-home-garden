@@ -5,7 +5,11 @@ import { HiOutlineXMark } from "react-icons/hi2";
 /*
     The toggle function is passed down as a prop from App.js to close modal on click
 */
-function NewsModal({ toggle }) {
+function NewsModal({ show, toggle }) {
+  show
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "auto");
+
   return (
     <div className="news-modal-backdrop">
       <div className="news-modal">

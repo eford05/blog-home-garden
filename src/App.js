@@ -25,17 +25,17 @@ function App() {
     const [cat, setCat] = useState(0);
     const [currentPost, setCurrentPost] = useState(1);
 
-    //If showModal is true prevent scrolling
-    showModal
-      ? (document.body.style = "hidden")
-      : (document.body.style = "auto");
-
     return (
       <Fragment>
         <CatContext.Provider value={{ cat, setCat }}>
           <PostContext.Provider value={{ currentPost, setCurrentPost }}>
             <Navbar toggle={() => setShowModal(!showModal)} />
-            {showModal && <NewsModal toggle={() => setShowModal(!showModal)} />}
+            {showModal && (
+              <NewsModal
+                show={showModal}
+                toggle={() => setShowModal(!showModal)}
+              />
+            )}
             <Outlet />
             <Footer toggle={() => setShowModal(!showModal)} />
           </PostContext.Provider>
