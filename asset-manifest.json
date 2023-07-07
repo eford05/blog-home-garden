@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/blog-home-garden/static/css/main.93b3c87f.css",
+    "main.js": "/blog-home-garden/static/js/main.b7b7d3ad.js",
+    "index.html": "/blog-home-garden/index.html",
+    "main.93b3c87f.css.map": "/blog-home-garden/static/css/main.93b3c87f.css.map",
+    "main.b7b7d3ad.js.map": "/blog-home-garden/static/js/main.b7b7d3ad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93b3c87f.css",
+    "static/js/main.b7b7d3ad.js"
+  ]
+}
