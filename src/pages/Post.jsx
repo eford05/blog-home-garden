@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { HiOutlinePencil, HiOutlineTrash } from "react-icons/hi2";
+import Recommended from "../components/Recommended";
 import { Link } from "react-router-dom";
 import { posts } from "../data/data";
 import "../styles/post.css";
@@ -39,7 +40,7 @@ function Post() {
             <p className="post">{post.post}</p>
           </article>
         ))}
-      <section className="endorsements-container"></section>
+      <Recommended />
     </main>
   );
 }
