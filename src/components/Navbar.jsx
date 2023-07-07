@@ -13,55 +13,53 @@ function Navbar({ toggle }) {
   const { setCat } = useContext(CatContext);
 
   return (
-    <Fragment>
-      <nav className="primary-nav">
-        <i
-          onClick={() => setToggleNav(!toggleNav)}
-          className={!toggleNav ? "bars" : "close"}
-        >
-          {!toggleNav ? (
-            <HiOutlineBars3 className="nav-icon" />
-          ) : (
-            <HiOutlineXMark className="nav-icon" />
-          )}
-        </i>
-        <div className="logo-wrapper" onClick={() => setCat(0)}>
-          <NavLink to="/">
-            <h3 className="logo">Blog Home & Garden</h3>
-            <p className="logo-desc">A century of love for home and garden</p>
-          </NavLink>
-        </div>
-        <ul className="nav-list">
-          <li className="nav-li">
-            <p>Username</p>
-          </li>
-          <li className="nav-li">
-            <div className="nav-li-wrapper">
-              <NavLink to="/login">Login</NavLink>
-            </div>
-          </li>
-          <li className="nav-li">
-            <div className="nav-li-wrapper">
-              <NavLink to="/write">Write</NavLink>
-            </div>
-          </li>
-          <li className="nav-li">
-            <div className="nav-li-wrapper" onClick={toggle}>
-              <p>Newsletter</p>
-            </div>
-          </li>
-        </ul>
-        <div
-          className={
-            !toggleNav ? "links-content-wrapper" : "links-content-wrapper show"
-          }
-        >
-          <NavLinks className="links-content" />
-        </div>
+    <nav className="primary-nav">
+      <i
+        onClick={() => setToggleNav(!toggleNav)}
+        className={!toggleNav ? "bars" : "close"}
+      >
+        {!toggleNav ? (
+          <HiOutlineBars3 className="nav-icon" />
+        ) : (
+          <HiOutlineXMark className="nav-icon" />
+        )}
+      </i>
+      <div className="logo-wrapper" onClick={() => setCat(0)}>
+        <NavLink to="/">
+          <h3 className="logo">Blog Home & Garden</h3>
+          <p className="logo-desc">A century of love for home and garden</p>
+        </NavLink>
+      </div>
+      <ul className="nav-list">
+        <li className="nav-li">
+          <p>Username</p>
+        </li>
+        <li className="nav-li">
+          <div className="nav-li-wrapper">
+            <NavLink to="/login">Login</NavLink>
+          </div>
+        </li>
+        <li className="nav-li">
+          <div className="nav-li-wrapper">
+            <NavLink to="/write">Write</NavLink>
+          </div>
+        </li>
+        <li className="nav-li">
+          <div className="nav-li-wrapper" onClick={toggle}>
+            <p>Newsletter</p>
+          </div>
+        </li>
+      </ul>
+      <div
+        className={
+          !toggleNav ? "links-content-wrapper" : "links-content-wrapper show"
+        }
+      >
+        <NavLinks className="links-content" />
+      </div>
 
-        {toggleNav && <div className="backdrop"></div>}
-      </nav>
-    </Fragment>
+      {toggleNav && <div className="backdrop"></div>}
+    </nav>
   );
 }
 
