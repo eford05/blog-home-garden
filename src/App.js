@@ -34,7 +34,7 @@ function App() {
       <Fragment>
         <CatContext.Provider value={{ cat, setCat }}>
           <PostContext.Provider value={{ currentPost, setCurrentPost }}>
-            <Navbar />
+            <Navbar toggle={() => setShowModal(!showModal)} />
             {showModal && <NewsModal toggle={() => setShowModal(!showModal)} />}
             <Outlet />
             <Footer toggle={() => setShowModal(!showModal)} />
