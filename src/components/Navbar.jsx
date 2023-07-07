@@ -12,6 +12,11 @@ function Navbar({ toggle }) {
 
   const { setCat } = useContext(CatContext);
 
+  //prevent scroll
+  toggleNav
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "auto");
+
   return (
     <nav className="primary-nav">
       <i
